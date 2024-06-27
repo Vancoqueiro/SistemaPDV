@@ -1,0 +1,72 @@
+﻿@model SistemaPdv.Core.ViewModel.ProdutoIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+}
+<script src="~/Scripts/Produto/ProdutoIndex.js"></script>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo Produto", "Create")
+</p>
+
+
+@using (Html.BeginForm())
+{
+    <div class="col-md-10 text-center" style="padding:10px">
+        @Html.TextBox("descricaoPesquisa", Model.descricaoPesquisa, new { @class = "form-control", @placeholder = "DIGITE O PRODUTO" })
+    </div>
+    <div class="col-md-2" style="padding:10px">
+        <input type="submit" class="btn btn-warning pull-right" value="Filtrar" id="filtrar" />
+    </div>
+}
+
+<div class="col-md-12 text-left" style="font-weight: bold" id="msgSemItens">
+    <div>
+        Nenhum Produto encontrado!
+    </div>
+</div>
+
+<table class="table" id="tabela">
+    <tr>
+        <th>
+            Identificador
+        </th>
+        <th>
+            Nome do Fabricante
+        </th>
+        <th>
+            Descrição do Produto
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Produtos)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_produto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome_fabricante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricao)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id_produto }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id_produto }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id_produto }, new { onclick = "return confirmarDelete()", id = "Delete" })
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+

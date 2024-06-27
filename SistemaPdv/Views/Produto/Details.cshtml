@@ -1,0 +1,118 @@
+﻿@model SistemaPdv.Core.ViewModel.ProdutoDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    .dl-horizontal dt {
+        width: auto;
+        margin: 5px;
+    }
+</style>
+
+<h2>Details</h2>
+
+<div>
+    <h4>Detalhes dos Produtos</h4>
+    <hr />
+
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#tab1">Produto</a></li>
+        <li><a data-toggle="tab" href="#tab2">Histórico de Preço</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="tab1" class="tab-pane fade in active">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.id_produto)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.id_produto)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.nome_fabricante)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.nome_fabricante)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.descricao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.descricao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.quantidade_estoque)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.quantidade_estoque)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.numero_codigo_barras)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.numero_codigo_barras)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Produto.valor_produto)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Produto.valor_produto)
+                </dd>
+
+            </dl>
+
+        </div>
+
+        <div id="tab2" class="tab-pane fade">
+            <h3>Lista de Preços</h3>
+
+            <div style="width: 300px">
+                
+                <table class="table">
+                    <tr>
+                        <th>
+                            Início da vigência
+                        </th>
+                        <th>
+                            Preço
+                        </th>
+                    </tr>
+
+                    @foreach (var preco in Model.HistoricoPreco)
+                    {
+                        <tr>
+                            <td>@preco.data_inicio_vigencia.ToString("dd-MM-yyyy HH:mm")</td>
+                            <td>@preco.valor_produto.ToString("N")</td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<p>
+
+    @Html.ActionLink("Back to List", "Index")
+</p>

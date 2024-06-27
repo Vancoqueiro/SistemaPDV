@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPdv", "SistemaPdv\SistemaPdv.csproj", "{1DC67F1B-B4BE-4E95-9005-DCB11229DD66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPdv.Core", "SistemaPdv.BLL\SistemaPdv.Core.csproj", "{44647D65-E702-4A78-B99C-233CBF47FE26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DC67F1B-B4BE-4E95-9005-DCB11229DD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC67F1B-B4BE-4E95-9005-DCB11229DD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC67F1B-B4BE-4E95-9005-DCB11229DD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC67F1B-B4BE-4E95-9005-DCB11229DD66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44647D65-E702-4A78-B99C-233CBF47FE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44647D65-E702-4A78-B99C-233CBF47FE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44647D65-E702-4A78-B99C-233CBF47FE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44647D65-E702-4A78-B99C-233CBF47FE26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EFA02A0-9E09-41D6-94B8-D0E28F466CBE}
+	EndGlobalSection
+EndGlobal
