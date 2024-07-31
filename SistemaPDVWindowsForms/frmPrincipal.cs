@@ -37,7 +37,8 @@ namespace SistemaPDVWindowsForms
 
         private void indexToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var form = new frmListaTipoProduto();
+            form.ShowDialog(this);
         }
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
