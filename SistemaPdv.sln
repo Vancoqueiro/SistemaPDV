@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPdv", "SistemaPdv\Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPdv.Core", "SistemaPdv.BLL\SistemaPdv.Core.csproj", "{44647D65-E702-4A78-B99C-233CBF47FE26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPDVWindowsForms", "SistemaPDVWindowsForms\SistemaPDVWindowsForms.csproj", "{91DF4E48-87D4-4493-8927-7BD527A7EBE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{44647D65-E702-4A78-B99C-233CBF47FE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44647D65-E702-4A78-B99C-233CBF47FE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44647D65-E702-4A78-B99C-233CBF47FE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91DF4E48-87D4-4493-8927-7BD527A7EBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DF4E48-87D4-4493-8927-7BD527A7EBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DF4E48-87D4-4493-8927-7BD527A7EBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DF4E48-87D4-4493-8927-7BD527A7EBE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

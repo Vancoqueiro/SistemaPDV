@@ -13,6 +13,9 @@ namespace SistemaPdv.Core.Logic
     {
         public static void RegistrarTipoProduto(TipoProdutoViewModel viewModel)
         {
+            if (string.IsNullOrEmpty(viewModel.descricao))
+                throw new ArgumentException("Informe a descrição do Produto");
+
             var descricoesExistentes = TipoProdutoEntity.Pesquisar(null, viewModel.descricao);
 
             if (descricoesExistentes.Count > 0)
