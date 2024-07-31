@@ -55,7 +55,28 @@ namespace SistemaPDVWindowsForms
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dgvLista.SelectedRows.Count == 0)
+                    return;
 
+                if (!int.TryParse(dgvLista.SelectedRows[0].Cells[0].Value.ToString(), out int id))
+                    return;
+
+                var indexLinhaSelecionada = dgvLista.SelectedRows[0].Index;
+
+                var form = new frmAlterarTipoProduto(id);
+                form.ShowDialog(this);
+
+                var lista = TipoProdutoLogic.ListarTipoProduto();
+                PupulaGrid(lista);
+
+                dgvLista.Rows[indexLinhaSelecionada].Selected = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Erro no processamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

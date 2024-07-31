@@ -52,6 +52,12 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipoProduto\frmAlterarTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoProduto\frmAlterarTipoProduto.Designer.cs">
+      <DependentUpon>frmAlterarTipoProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoProduto\frmListaTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoProduto\frmAlterarTipoProduto.resx">
+      <DependentUpon>frmAlterarTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipoProduto\frmListaTipoProduto.resx">
       <DependentUpon>frmListaTipoProduto.cs</DependentUpon>

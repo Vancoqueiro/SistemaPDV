@@ -65,6 +65,8 @@ namespace SistemaPdv.Core.Entity
                 if (!string.IsNullOrEmpty(descricao))
                     sql += $" AND UPPER(DESCRICAO) LIKE '%{descricao.ToUpper()}%'";
 
+                sql += " ORDER BY ID_TIPO_PRODUTO";
+
                 var commando = new NpgsqlCommand(sql, connection);
 
                 connection.Open();
